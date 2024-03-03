@@ -1,1 +1,6 @@
 .config
+*.tfstate*
+*terraform.lock.hcl
+*.tfvars
+.terraform/*
+*tfplan
