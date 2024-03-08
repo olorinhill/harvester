@@ -19,12 +19,13 @@ resource "harvester_virtualmachine" "docker_vm" {
   }
 
   disk {
-    name       = "disk-0"
-    type       = "disk"
-    size       = var.docker_vm_disk_size
-    bus        = "virtio"
-    boot_order = 1
-    image      = harvester_image.ubuntu-jammy.id
+    name        = "disk-0"
+    type        = "disk"
+    size        = var.docker_vm_disk_size
+    bus         = "virtio"
+    boot_order  = 1
+    image       = harvester_image.ubuntu-jammy.id
+    auto_delete = true
   }
 
   cloudinit {
