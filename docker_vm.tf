@@ -14,8 +14,9 @@ resource "harvester_virtualmachine" "docker_vm" {
   secure_boot = false
 
   network_interface {
-    name         = "nic-1"
-    network_name = data.harvester_network.secure.id
+    name           = "nic-1"
+    network_name   = data.harvester_network.secure.id
+    wait_for_lease = true
   }
 
   disk {
